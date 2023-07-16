@@ -5,7 +5,7 @@ export const Box = () => {
   const [animate, setAnimate] = useState<boolean>(false);
   return (
     <motion.div
-      className="w-40 h-40 mb-40 bg-teal-500 flex items-center justify-center"
+      className="w-40 h-40 bg-teal-500 flex items-center justify-center"
       animate={{
         x: animate ? "60rem" : 0,
         opacity: animate ? 1 : 0.1,
