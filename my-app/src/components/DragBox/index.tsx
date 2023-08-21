@@ -5,7 +5,7 @@ export const DragBox = () => {
     <motion.div
       className="w-40 h-40 bg-teal-500 flex items-center justify-center"
       drag
-      dragConstraints={{ right: 7, left: -15, top: 7, bottom: 7 }}
+      dragConstraints={{ right: 7, left: 7, top: 7, bottom: 7 }}
       whileHover={{
         scale: 1.1,
       }}
