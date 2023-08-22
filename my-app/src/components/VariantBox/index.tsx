@@ -1,13 +1,27 @@
 import { motion } from "framer-motion";
 
 export const VariantBox = () => {
-  // const [boxes, setBoxes] = useState()
   const variants = {
     hidden: {
       x: "-100vw",
     },
     visible: {
       x: 0,
+      transition: {
+        // delay: 0.5,
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  const childVariants = {
+    hidden: {
+      x: -10,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
     },
   };
 
@@ -17,20 +31,15 @@ export const VariantBox = () => {
       variants={variants}
       initial="hidden"
       animate="visible"
-      // animate="box"
-      // initial="boxInitial"
-      // variants={variants}
-      // initial={{
-      //   x: -300,
-      // }}
     >
-      {[1, 2, 3].map((box) => (
-        <div
-          key={box}
+      {[1, 2, 3].map((box, index) => (
+        <motion.div
+          key={index}
           className="w-8 h-8 bg-white flex items-center justify-center"
+          variants={childVariants}
         >
           {box}
-        </div>
+        </motion.div>
       ))}
     </motion.div>
   );
