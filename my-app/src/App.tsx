@@ -1,3 +1,4 @@
+import { AnimateBox } from "./components/Animation";
 import { Box } from "./components/Box";
 import { DragBox } from "./components/DragBox";
 import { KeyFrameBox } from "./components/KeyFrameBox";
@@ -10,6 +11,7 @@ export default function App() {
       <Box />
       <DragBox />
       <VariantBox />
+      <AnimateBox />
     </main>
   );
 }
